@@ -15,7 +15,9 @@
         clj-long 42
         py-long (py/->python clj-long)]
     (println "Clojure String:" clj-str "->" "Python Type:" (py/python-type py-str))
-    (println "Clojure Long:" clj-long "->" "Python Type:" (py/python-type py-long)))
+    (println "Python String content (converted to Clojure):" (py/->jvm py-str))
+    (println "Clojure Long:" clj-long "->" "Python Type:" (py/python-type py-long))
+    (println "Python Long content (converted to Clojure):" (py/->jvm py-long)))
 
   (println "\n=== 2. Collection Conversions ===")
   (let [clj-vec [1 2 3]
