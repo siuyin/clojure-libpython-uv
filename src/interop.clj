@@ -17,7 +17,9 @@
     (println "Clojure String:" clj-str "->" "Python Type:" (py/python-type py-str))
     (println "Python String content (converted to Clojure):" (py/->jvm py-str))
     (println "Clojure Long:" clj-long "->" "Python Type:" (py/python-type py-long))
-    (println "Python Long content (converted to Clojure):" (py/->jvm py-long)))
+    (println "Python Long content (converted to Clojure):" (py/->jvm py-long))
+    (println "Running python hello world: ")
+    (py/run-simple-string "print(f'hello world from python! Answer to life, the universe, and everything is {2+40}.')"))
 
   (println "\n=== 2. Collection Conversions ===")
   (let [clj-vec [1 2 3]
