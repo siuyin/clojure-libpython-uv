@@ -8,6 +8,7 @@ The `src` directory contains examples of different interop patterns:
 
 - **`core.clj`**: Basic setup and initialization.
   - Shows how to initialize the Python environment.
+  - Demonstrates a basic Python print call.
   - Demonstrates a simple calculation using the `numpy` library imported from Python.
 
 - **`bridging.clj`**: Advanced functional bridging and error handling.
