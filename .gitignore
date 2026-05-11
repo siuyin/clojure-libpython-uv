@@ -1,0 +1,33 @@
+# Clojure
+.cpcache/
+classes/
+checkouts/
+.lein-repl-history
+.lein-failures
+.lein-plugins/
+.lein-port
+target/
+pom.xml
+pom.xml.asc
+*.jar
+
+*.swap
+*secret*
+
+# IDEs
+.idea/
+.vscode/
+.settings/
+.classpath
+.project
+.factorypath
+
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS
+.DS_Store
+Thumbs.db

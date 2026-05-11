@@ -1,0 +1,4 @@
+{:python-version "3.12"
+ :python-deps ["numpy"]
+ :python-executable ".venv/bin/python"
+ :pre-initialize-fn 'libpython-clj-uv.sync/sync-python-setup!}
