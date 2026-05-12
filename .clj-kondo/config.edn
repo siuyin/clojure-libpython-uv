@@ -1,0 +1,8 @@
+{:linters
+ {:unresolved-namespace
+  {:exclude [python np math]}
+  :unresolved-symbol
+  {:exclude [py. py..]}}
+ :lint-as
+ {libpython-clj2.python/py. clojure.core/->
+  libpython-clj2.python/py.. clojure.core/->>}}
