@@ -23,6 +23,29 @@ The `src` directory contains examples of different interop patterns:
   - **Error Handling**: Shows how to catch Python exceptions (like `ModuleNotFoundError` or `ZeroDivisionError`) within Clojure using standard `try/catch` blocks.
   - **Safe Interop**: Brief example of using `try` for safe type conversion.
 
+- **`python_interop.clj`**: Example of interoperating with a custom local Python library.
+  - Demonstrates how to add the local project path to `sys.path`.
+  - Shows how to `require-python` a local module (`python_lib.math_ops`).
+  - Executes basic math operations defined in Python from Clojure.
+
+## Python Library (`python_lib/`)
+
+The `python_lib` directory contains custom Python code intended to be called from Clojure.
+
+- **`math_ops.py`**: A simple Python module providing basic arithmetic functions (`add`, `subtract`).
+
+## Custom Python Library Interop
+
+To call local Python modules, the directory containing them must be in the Python search path (`sys.path`). `src/python_interop.clj` demonstrates this by:
+
+1. Initializing Python: `(py/initialize!)`
+2. Appending the current directory to `sys.path`:
+   ```clojure
+   (let [sys (py/import-module "sys")]
+     (py/py. (py/get-attr sys "path") "append" "."))
+   ```
+3. Requiring the module: `(require-python '[python_lib.math_ops :as math])`
+
 ## Configuration
 
 - **`deps.edn`**: Manages Clojure dependencies, including `libpython-clj` and `libpython-clj-uv`.
