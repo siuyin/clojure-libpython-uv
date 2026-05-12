@@ -8,7 +8,7 @@
   (println "  [Clojure] Squaring:" x)
   (* x x))
 
-(defn -main [& args]
+(defn -main [& _args]
   (py/initialize!)
 
   (println "=== 1. Passing Clojure Functions to Python ===")

@@ -6,7 +6,7 @@
 (require-python '[builtins :as python]
                 '[numpy :as np])
 
-(defn -main [& args]
+(defn -main [& _args]
   (py/initialize!)
 
   (println "=== 1. Basic Type Conversions ===")
